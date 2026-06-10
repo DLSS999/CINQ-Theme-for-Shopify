@@ -47,7 +47,7 @@
     icon_style: settings.icons_style,
     icon_shape: settings.icons_shape,
     auto_hide_controls: false,
-    infinite: false,
+    infinite: true,
     initial_slide: 0,
     slide_count: slide_count,
     slideshow_gutters: slideshow_gutters
@@ -92,11 +92,11 @@
     gap: var(--resource-list-column-gap);
 
     /* Add padding to prevent hover animations from being clipped in slideshow
-     15px accommodates:
-     - Scale effect (9px on each side from 1.03 scale)
-     - Lift effect (4px upward movement)
-     - Shadow (15px spread with -5px offset)
-     Using 16px for better alignment with our spacing scale */
+      15px accommodates:
+      - Scale effect (9px on each side from 1.03 scale)
+      - Lift effect (4px upward movement)
+      - Shadow (15px spread with -5px offset)
+      Using 16px for better alignment with our spacing scale */
     margin-block: -16px;
     padding-block: 16px;
   }
