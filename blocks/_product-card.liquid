@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign product = closest.product
 -%}
@@ -7,6 +5,27 @@
 {% capture children %}
   {% content_for 'blocks', closest.product: product %}
 {% endcapture %}
+
+{% capture cinq_product_card_meta %}
+  {% unless product == blank %}
+    {% liquid
+      assign product_season = product.metafields.custom.season
+      if product_season == blank
+        assign product_season = 'AUTUMN/WINTER 2026'
+      endif
+    %}
+    <div class="cinq-product-card-meta" aria-hidden="true">
+      {% if product_season != blank %}
+        <div class="cinq-product-card-season">{{ product_season }}</div>
+      {% endif %}
+      {% if product.vendor != blank %}
+        <div class="cinq-product-card-vendor">{{ product.vendor }}</div>
+      {% endif %}
+    </div>
+  {% endunless %}
+{% endcapture %}
+
+{% assign children = children | prepend: cinq_product_card_meta %}
 
 {% render 'product-card', children: children, product: product %}
 {% render 'buy-buttons-styles' %}
