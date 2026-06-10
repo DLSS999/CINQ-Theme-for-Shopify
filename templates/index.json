@@ -1,28 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
-  "sections": {
-    "cinq_product_carousel": {
-      "type": "cinq-loop-product-carousel",
-      "settings": {
-        "heading": "REFRESH YOUR LOOK",
-        "subheading": "Explore the selection that will transform your wardrobe",
-        "product_limit": 10,
-        "columns_desktop": 6,
-        "columns_mobile": 2,
-        "show_arrows": true,
-        "button_label": "Shop now"
-      }
-    }
-  },
-  "order": [
-    "cinq_product_carousel"
-  ]
+  "sections": {},
+  "order": []
 }
